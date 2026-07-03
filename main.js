@@ -1,50 +1,12 @@
 /* ============================================
    MIGO.IA – MAIN.JS
    ============================================ */
-
 document.addEventListener('DOMContentLoaded', () => {
-
-  // ─── CUSTOM CURSOR ───────────────────────────
-  const cursor = document.getElementById('cursor');
-  const follower = document.getElementById('cursorFollower');
-  let mouseX = 0, mouseY = 0, followerX = 0, followerY = 0;
-
-  document.addEventListener('mousemove', e => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    cursor.style.left = mouseX + 'px';
-    cursor.style.top  = mouseY + 'px';
-  });
-
-  function animateFollower() {
-    followerX += (mouseX - followerX) * 0.12;
-    followerY += (mouseY - followerY) * 0.12;
-    follower.style.left = followerX + 'px';
-    follower.style.top  = followerY + 'px';
-    requestAnimationFrame(animateFollower);
-  }
-  animateFollower();
-
-  // Grow on interactive elements
-  document.querySelectorAll('a, button, .pain-card, .team-card').forEach(el => {
-    el.addEventListener('mouseenter', () => {
-      cursor.style.transform = 'translate(-50%,-50%) scale(2)';
-      follower.style.width = '56px';
-      follower.style.height = '56px';
-      follower.style.borderColor = 'rgba(0,255,204,0.6)';
-    });
-    el.addEventListener('mouseleave', () => {
-      cursor.style.transform = 'translate(-50%,-50%) scale(1)';
-      follower.style.width = '36px';
-      follower.style.height = '36px';
-      follower.style.borderColor = 'rgba(0,255,204,0.35)';
-    });
-  });
 
   // ─── NAV SCROLL ──────────────────────────────
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 50);
+    nav.classList.toggle('scrolled', window.scrollY > 20);
   });
 
   // ─── MOBILE MENU ─────────────────────────────
@@ -55,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
   burger.addEventListener('click', () => {
     menuOpen = !menuOpen;
     mobileMenu.classList.toggle('open', menuOpen);
-    // Animate burger
     const spans = burger.querySelectorAll('span');
     if (menuOpen) {
       spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
@@ -66,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Close mobile menu on link click
   document.querySelectorAll('.mob-link').forEach(link => {
     link.addEventListener('click', () => {
       menuOpen = false;
@@ -77,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ─── REVEAL ON SCROLL ────────────────────────
   const revealEls = document.querySelectorAll('.reveal');
-
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -85,13 +44,12 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.1, rootMargin: '0px 0px -20px 0px' });
 
   revealEls.forEach(el => revealObserver.observe(el));
 
   // ─── COUNTER ANIMATION ───────────────────────
-  const statNums = document.querySelectorAll('.stat-num');
-
+  const statNums = document.querySelectorAll('.stat-num span');
   const counterObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -105,12 +63,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function animateCounter(el) {
     const target = parseInt(el.dataset.target, 10);
-    const duration = 1800;
+    const duration = 2000;
     const start = performance.now();
 
     function step(now) {
       const progress = Math.min((now - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3); // cubic ease-out
+      const eased = 1 - Math.pow(1 - progress, 4); // quart ease-out
       el.textContent = Math.round(eased * target);
       if (progress < 1) requestAnimationFrame(step);
     }
@@ -118,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ─── FORM – OPTION BUTTONS ───────────────────
-  const optBtns = document.querySelectorAll('.opt-btn');
+  const optBtns = document.querySelectorAll('.pill-btn');
   const dolorHidden = document.getElementById('dolorHidden');
 
   optBtns.forEach(btn => {
@@ -136,20 +94,19 @@ document.addEventListener('DOMContentLoaded', () => {
   if (contactForm) {
     contactForm.addEventListener('submit', e => {
       e.preventDefault();
-
       const nombre = contactForm.nombre.value.trim();
       const email  = contactForm.email.value.trim();
 
-      // Basic validation
       if (!nombre || !email) {
-        shakeForm();
+        contactForm.style.animation = 'shake 0.4s ease';
+        setTimeout(() => { contactForm.style.animation = ''; }, 400);
         return;
       }
 
-      // Simulate async send
-      const btn = contactForm.querySelector('.btn-form');
-      btn.textContent = 'Enviando…';
+      const btn = contactForm.querySelector('button[type="submit"]');
+      btn.textContent = 'Enviando...';
       btn.disabled = true;
+      btn.style.opacity = '0.7';
 
       setTimeout(() => {
         contactForm.style.display = 'none';
@@ -158,13 +115,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  function shakeForm() {
-    const form = document.getElementById('contactForm');
-    form.style.animation = 'shake 0.4s ease';
-    setTimeout(() => { form.style.animation = ''; }, 400);
-  }
-
-  // Add shake keyframes dynamically
   const shakeStyle = document.createElement('style');
   shakeStyle.textContent = `
     @keyframes shake {
@@ -176,27 +126,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   `;
   document.head.appendChild(shakeStyle);
-
-  // ─── WHATSAPP FAB – SHOW AFTER SCROLL ────────
-  const fab = document.getElementById('whatsappFab');
-  let fabVisible = false;
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 300 && !fabVisible) {
-      fab.style.opacity = '1';
-      fab.style.transform = 'translateY(0)';
-      fabVisible = true;
-    } else if (window.scrollY <= 300 && fabVisible) {
-      fab.style.opacity = '0';
-      fab.style.transform = 'translateY(20px)';
-      fabVisible = false;
-    }
-  });
-
-  // Initial state
-  fab.style.opacity = '0';
-  fab.style.transform = 'translateY(20px)';
-  fab.style.transition = 'opacity 0.4s ease, transform 0.4s ease, box-shadow 0.25s, transform 0.25s';
 
   // ─── SMOOTH ANCHOR SCROLL ────────────────────
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -211,24 +140,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ─── PARALLAX ORBS ───────────────────────────
-  window.addEventListener('scroll', () => {
-    const y = window.scrollY;
-    document.querySelectorAll('.orb-1').forEach(o => {
-      o.style.transform = `translateY(${y * 0.12}px)`;
-    });
-    document.querySelectorAll('.orb-2').forEach(o => {
-      o.style.transform = `translateY(${-y * 0.08}px)`;
-    });
-  });
-
-  // ─── HERO TITLE CHAR REVEAL ──────────────────
-  // Stagger in the hero after a short delay
+  // ─── INITIAL REVEAL ──────────────────────────
   setTimeout(() => {
     document.querySelectorAll('.hero .reveal').forEach((el, i) => {
       el.style.transitionDelay = (i * 0.1) + 's';
       el.classList.add('in-view');
     });
-  }, 200);
+  }, 100);
 
 });
