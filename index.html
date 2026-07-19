@@ -3,25 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Migo.ia – Software a Medida e Inteligencia Operativa para Latinoamérica</title>
-  <meta name="description" content="Migo.ia transforma el caos operativo en rentabilidad auditable. Integramos Inteligencia Artificial y Blockchain para digitalizar procesos y mejorar la eficiencia B2B en Chile y Latinoamérica." />
-  <meta name="keywords" content="Inteligencia Artificial, Software a Medida, Blockchain, Trazabilidad, Digitalización de Empresas, IA B2B, Automatización, Chile, Latinoamérica" />
-  <meta name="author" content="Migo.ia" />
-  <meta name="robots" content="index, follow" />
-  
-  <!-- Open Graph / Redes Sociales -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Migo.ia – Inteligencia Operativa y Software a Medida" />
-  <meta property="og:description" content="Transformamos la ineficiencia manual en rentabilidad auditable con Inteligencia Artificial." />
-  <meta property="og:image" content="images/migo_favicon.png" />
-  
+  <title>Migo.ia – Inteligencia Operativa para Latinoamérica</title>
   <link rel="icon" type="image/png" href="images/migo_favicon.png" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet" />
 </head>
 <body>
+
+  <div class="noise-overlay"></div>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
 
   <!-- NAV -->
   <nav class="nav" id="nav">
@@ -52,105 +45,130 @@
 
   <!-- HERO -->
   <section class="hero" id="hero">
-    <div class="hero-glow"></div>
-    <div class="container hero-container">
-      <div class="hero-content">
-        <div class="hero-badge reveal">
-          <span class="badge-dot"></span>
-          Operando en Chile · Latinoamérica
-        </div>
-        <h1 class="hero-title reveal reveal-delay-1">
-          Tu empresa factura <span class="text-gradient">millones.</span><br />
-          Tu operación sigue en papel.
-        </h1>
-        <p class="hero-sub reveal reveal-delay-2">
-          Migo.ia fusiona Inteligencia Artificial y Software a Medida para extinguir la ineficiencia manual. Transformamos el caos operativo en rentabilidad auditable.
-        </p>
-        <div class="hero-ctas reveal reveal-delay-3">
-          <a href="#contacto" class="btn-primary">
-            Agendar Diagnóstico Gratuito
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-        </div>
+    <div class="hero-bg">
+      <div class="grid-lines"></div>
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
 
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        Operando en Chile · Latinoamérica
       </div>
+      <h1 class="hero-title reveal reveal-delay-1">
+        Tu empresa<br />
+        <span class="title-accent">factura millones.</span><br />
+        Tu operación<br />
+        sigue en papel.
+      </h1>
+      <p class="hero-sub reveal reveal-delay-2">
+        Migo.ia fusiona <strong>Inteligencia Artificial</strong>, Software a Medida y Blockchain para extinguir la ineficiencia manual. Transformamos el caos operativo en <strong>rentabilidad auditable</strong>.
+      </p>
+      <div class="hero-ctas reveal reveal-delay-3">
+        <a href="#contacto" class="btn-primary">
+          Dejar el Pasado Atrás
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <span class="btn-note">Consulta de Diagnóstico Gratuita</span>
+      </div>
+      <div class="hero-stats reveal reveal-delay-4">
+        <div class="stat">
+          <span class="stat-num" data-target="98">0</span><span class="stat-unit">%</span>
+          <span class="stat-label">Reducción de errores manuales</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="3">0</span><span class="stat-unit">x</span>
+          <span class="stat-label">Velocidad de onboarding</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="100">0</span><span class="stat-unit">%</span>
+          <span class="stat-label">Trazabilidad garantizada</span>
+        </div>
+      </div>
+    </div>
 
-      <div class="hero-visual reveal reveal-delay-2">
-        <div class="glass-panel mockup-dash">
-          <div class="mockup-header">
-            <div class="window-controls">
-              <span></span><span></span><span></span>
-            </div>
-            <div class="mockup-title">migo.ia / panel-operativo</div>
+    <div class="hero-visual reveal reveal-delay-2">
+      <div class="dashboard-mock">
+        <div class="dash-header">
+          <span class="dash-dot red"></span>
+          <span class="dash-dot yellow"></span>
+          <span class="dash-dot green"></span>
+          <span class="dash-title">Migo.ia · Panel Operativo</span>
+        </div>
+        <div class="dash-body">
+          <div class="dash-metric">
+            <span class="metric-label">Eficiencia Operativa</span>
+            <div class="metric-bar"><div class="metric-fill" style="--w:94%"></div></div>
+            <span class="metric-val neon">94%</span>
           </div>
-          <div class="mockup-body">
-            <div class="mockup-row">
-              <div class="mockup-card">
-                <span class="mc-label">Eficiencia Operativa</span>
-                <span class="mc-value">94%</span>
-                <div class="mc-progress"><div class="mc-bar" style="--w:94%"></div></div>
-              </div>
-              <div class="mockup-card">
-                <span class="mc-label">Leads Calificados</span>
-                <span class="mc-value">87%</span>
-                <div class="mc-progress"><div class="mc-bar mc-bar-alt" style="--w:87%"></div></div>
-              </div>
-            </div>
-            <div class="mockup-flow">
-              <div class="m-node">Lead Capturado</div>
-              <div class="m-line"></div>
-              <div class="m-node active">Filtro IA Activo</div>
-              <div class="m-line"></div>
-              <div class="m-node">Cierre Directo</div>
-            </div>
+          <div class="dash-metric">
+            <span class="metric-label">Leads Calificados IA</span>
+            <div class="metric-bar"><div class="metric-fill" style="--w:87%"></div></div>
+            <span class="metric-val neon">87%</span>
+          </div>
+          <div class="dash-metric">
+            <span class="metric-label">Datos en Blockchain</span>
+            <div class="metric-bar"><div class="metric-fill" style="--w:100%"></div></div>
+            <span class="metric-val neon">100%</span>
+          </div>
+          <div class="dash-chips">
+            <span class="chip chip-green">✓ Trazable</span>
+            <span class="chip chip-cyan">⚡ IA Activa</span>
+            <span class="chip chip-white">🔗 Blockchain</span>
+          </div>
+          <div class="dash-flow">
+            <div class="flow-node">Lead</div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-node accent">IA Filtra</div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-node">Cierre</div>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="scroll-cue">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
   </section>
 
-  <!-- PROBLEMA (Bento Grid) -->
+  <!-- PROBLEMA -->
   <section class="problema" id="problema">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">El Diagnóstico</span>
-        <h2 class="section-title">¿Gestionas una gran empresa o un <span class="text-gradient">almacén glorificado</span>?</h2>
-      </div>
-      <div class="bento-grid">
-        <div class="bento-card reveal">
-          <div class="bento-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      <div class="section-tag reveal">— El Diagnóstico</div>
+      <h2 class="section-title reveal">
+        ¿Estás gestionando una gran empresa<br />
+        <span class="accent">o un almacén glorificado?</span>
+      </h2>
+      <div class="cards-grid">
+        <div class="pain-card reveal">
+          <div class="pain-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
           </div>
           <h3>Datos Muertos en Terreno</h3>
-          <p>Planillas manuales que no se pueden auditar ni analizar. Estás ciego ante tus propias métricas críticas de operación.</p>
-          <div class="bento-tag">Riesgo Alto</div>
+          <p>Tus planillas manuales no se pueden auditar, no se pueden analizar y se pierden. Estás ciego ante tus propias métricas críticas.</p>
+          <div class="pain-tag">Riesgo: Alto</div>
         </div>
-        <div class="bento-card reveal reveal-delay-1">
-          <div class="bento-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div class="pain-card reveal reveal-delay-1">
+          <div class="pain-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           </div>
           <h3>Onboarding de Mostrador</h3>
-          <p>Cada nuevo cliente es un cuello de botella manual que frena tu capacidad de escala real y retrasa los ingresos.</p>
-          <div class="bento-tag">Cuello de Botella</div>
+          <p>Recibes clientes sin un flujo inteligente. Cada nuevo cliente es un cuello de botella manual que frena tu capacidad de escala real.</p>
+          <div class="pain-tag">Costo: Invisible</div>
         </div>
-        <div class="bento-card reveal reveal-delay-2 bento-col-span-2">
-          <div class="bento-content-row">
-            <div class="bento-text">
-              <div class="bento-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-              </div>
-              <h3>Ceguera de Conversión Comercial</h3>
-              <p>Tu equipo pierde tiempo valioso persiguiendo prospectos no calificados. No conoces tu ROAS real porque tu proceso está roto desde adentro y la información no fluye adecuadamente hacia los tomadores de decisiones.</p>
-              <div class="bento-tag">Pérdida Diaria</div>
-            </div>
-            <div class="bento-visual">
-               <div class="chart-mockup">
-                 <div class="bar bar-low"></div>
-                 <div class="bar bar-mid"></div>
-                 <div class="bar bar-high"></div>
-               </div>
-            </div>
+        <div class="pain-card reveal reveal-delay-2">
+          <div class="pain-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
           </div>
+          <h3>Ceguera de Conversión</h3>
+          <p>Tu área comercial pierde tiempo persiguiendo leads no calificados. No sabes cuál es tu ROAS real porque tu proceso está roto desde adentro.</p>
+          <div class="pain-tag">Pérdida: Diaria</div>
         </div>
       </div>
     </div>
@@ -159,173 +177,233 @@
   <!-- SOLUCIÓN -->
   <section class="solucion" id="solucion">
     <div class="container">
-      <div class="section-header reveal center">
-        <span class="section-tag">La Solución Migo.ia</span>
-        <h2 class="section-title">El Nuevo Estándar Operativo:<br/><span class="text-gradient">Digital, Inteligente e Inalterable.</span></h2>
-      </div>
-      
-      <div class="features-grid">
-        <div class="feature-card reveal">
-          <div class="fc-number">01</div>
-          <h3>Extinción del Papel y Trazabilidad</h3>
-          <p>Formularios de terreno convertidos en software a medida. Datos respaldados, garantizando inalterabilidad para tus auditorías.</p>
-          <div class="fc-visual">
-            <div class="glass-pill">Documento Digitalizado <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span></div>
+      <div class="section-tag reveal">— La Solución Migo.ia</div>
+      <h2 class="section-title reveal">
+        El Nuevo Estándar Operativo:<br />
+        <span class="accent">Digital, Inteligente e Inalterable.</span>
+      </h2>
+      <div class="solution-blocks">
+
+        <div class="sol-block reveal">
+          <div class="sol-number">01</div>
+          <div class="sol-content">
+            <h3>Extinción del Papel y Trazabilidad Total</h3>
+            <p>Convertimos tus formularios de terreno en software a medida. Cada dato capturado se respalda en <strong>Blockchain</strong>, garantizando inalterabilidad y confianza ciega para todas tus auditorías.</p>
+            <div class="sol-tags">
+              <span>Blockchain</span><span>Formularios a Medida</span><span>Auditoría</span>
+            </div>
+          </div>
+          <div class="sol-visual">
+            <div class="block-visual bv-blockchain">
+              <div class="bv-chain">
+                <div class="bv-node">📄</div>
+                <div class="bv-link">——</div>
+                <div class="bv-node active">✅</div>
+                <div class="bv-link">——</div>
+                <div class="bv-node">🔗</div>
+              </div>
+              <p>100% Trazable · Inalterable</p>
+            </div>
           </div>
         </div>
-        <div class="feature-card reveal reveal-delay-1">
-          <div class="fc-number">02</div>
-          <h3>Onboarding Flujo-Céntrico con IA</h3>
-          <p>La IA califica, segmenta y agenda automáticamente. Eliminamos la atención tipo almacén para que escales sin límites.</p>
-          <div class="fc-visual">
-            <div class="glass-pill">IA Calificando... <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="16" x2="8.01" y2="16"/><line x1="16" y1="16" x2="16.01" y2="16"/></svg></span></div>
+
+        <div class="sol-block sol-block-rev reveal">
+          <div class="sol-number">02</div>
+          <div class="sol-content">
+            <h3>Onboarding Flujo-Céntrico con IA</h3>
+            <p>Diseñamos e implementamos el flujo perfecto de recepción de clientes. La IA califica, segmenta y agenda automáticamente, eliminando la atención tipo almacén para siempre.</p>
+            <div class="sol-tags">
+              <span>IA Conversacional</span><span>Automatización</span><span>CRM</span>
+            </div>
+          </div>
+          <div class="sol-visual">
+            <div class="block-visual bv-flow">
+              <div class="flow-step">
+                <span class="fs-icon">👤</span><span>Lead entra</span>
+              </div>
+              <div class="flow-arrow-v">↓</div>
+              <div class="flow-step accent-step">
+                <span class="fs-icon">🤖</span><span>IA Califica</span>
+              </div>
+              <div class="flow-arrow-v">↓</div>
+              <div class="flow-step">
+                <span class="fs-icon">📅</span><span>Agenda Auto</span>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="feature-card reveal reveal-delay-2">
-          <div class="fc-number">03</div>
-          <h3>Filtrado Algorítmico de Leads</h3>
-          <p>Asistentes de IA filtran curiosos y entregan solo leads con alta intención de compra, maximizando el tiempo de tu equipo de ventas.</p>
-          <div class="fc-visual">
-            <div class="glass-pill">Lead Score: <span class="score-green">98/100</span></div>
+
+        <div class="sol-block reveal">
+          <div class="sol-number">03</div>
+          <div class="sol-content">
+            <h3>Filtrado Algorítmico de Leads</h3>
+            <p>No más tocar puertas. Implementamos asistentes de IA que filtran a los curiosos y entregan a tu equipo comercial solo leads con <strong>alta intención de compra</strong>. Maximizamos tu ROAS.</p>
+            <div class="sol-tags">
+              <span>Lead Scoring</span><span>ROAS</span><span>Automatización Comercial</span>
+            </div>
+          </div>
+          <div class="sol-visual">
+            <div class="block-visual bv-score">
+              <div class="score-ring">
+                <svg viewBox="0 0 80 80" width="80" height="80">
+                  <circle cx="40" cy="40" r="32" fill="none" stroke="#1a1a1a" stroke-width="6"/>
+                  <circle cx="40" cy="40" r="32" fill="none" stroke="#00ffcc" stroke-width="6"
+                    stroke-dasharray="201" stroke-dashoffset="20" stroke-linecap="round"
+                    transform="rotate(-90 40 40)"/>
+                </svg>
+                <span class="score-num">90</span>
+              </div>
+              <p>Score de Intención</p>
+            </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
   <!-- CASO DE ÉXITO -->
   <section class="caso" id="caso">
-    <div class="container">
-      <div class="caso-wrapper reveal">
-        <div class="caso-content">
-          <span class="section-tag">Caso de Éxito</span>
-          <h2 class="caso-title">De "llenar planillas" a <span class="text-white">cerrar contratos.</span></h2>
-          <p class="caso-desc">Una Consultora Ambiental en Chile transformó completamente su modelo operativo, dejando atrás el caos manual para adoptar una estructura 100% auditable y escalable.</p>
-          <div class="comparison">
-            <div class="comp-col">
-              <span class="comp-label">Antes</span>
-              <ul>
-                <li>Datos 100% manuales</li>
-                <li>Reportes inconsistentes</li>
-                <li>Desorden comercial</li>
-              </ul>
-            </div>
-            <div class="comp-col comp-after">
-              <span class="comp-label">Con Migo.ia</span>
-              <ul>
-                <li>Digitalización total</li>
-                <li>Reportes en tiempo real</li>
-                <li>IA filtra leads automáticamente</li>
-              </ul>
-            </div>
-          </div>
+    <div class="caso-inner">
+      <div class="caso-label reveal">— Caso de Éxito</div>
+      <h2 class="caso-title reveal">
+        Una Consultora Ambiental dejó de<br />
+        <span>"llenar planillas"</span> y empezó<br />
+        a <span class="accent-dark">cerrar contratos.</span>
+      </h2>
+      <div class="caso-compare reveal">
+        <div class="compare-before">
+          <div class="compare-tag before-tag">Antes</div>
+          <ul>
+            <li>📄 Datos de terreno 100% manuales</li>
+            <li>⏳ Reportes tardíos e inconsistentes</li>
+            <li>❌ Desorden comercial total</li>
+            <li>😰 Sin métricas auditables</li>
+          </ul>
         </div>
-        <div class="caso-quote">
-          <svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M11.192 15.757c0-.88-.23-1.618-.69-2.217-.326-.412-.768-.683-1.327-.812-.55-.128-1.07-.137-1.54-.028-.16-.95.1-1.95.76-3 .66-1.06 1.65-2.02 2.97-2.88l-1.2-1.47C8.22 6.5 6.9 7.66 5.84 9.1c-1.06 1.44-1.59 2.99-1.59 4.64 0 1.58.5 2.85 1.5 3.82 1 .97 2.22 1.45 3.67 1.45 1.34 0 2.42-.4 3.26-1.2.84-.8 1.26-1.82 1.26-3.05zM21.1 15.757c0-.88-.23-1.618-.69-2.217-.326-.412-.768-.683-1.327-.812-.55-.128-1.07-.137-1.54-.028-.16-.95.1-1.95.76-3 .66-1.06 1.65-2.02 2.97-2.88l-1.2-1.47c-1.95 1.16-3.27 2.32-3.96 3.76-.7 1.44-1.04 2.99-1.04 4.64 0 1.58.5 2.85 1.5 3.82 1 .97 2.22 1.45 3.67 1.45 1.34 0 2.42-.4 3.26-1.2.84-.8 1.26-1.82 1.26-3.05z"/></svg>
-          <p>"Migo.ia no nos vendió software; nos reestructuró la empresa. Ahora somos más rápidos, más auditables y vendemos más."</p>
-          <cite>— Cliente Consultora Ambiental, Chile</cite>
+        <div class="compare-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+        <div class="compare-after">
+          <div class="compare-tag after-tag">Con Migo.ia</div>
+          <ul>
+            <li>✅ Digitalización total de terreno</li>
+            <li>⚡ Reportes en tiempo real</li>
+            <li>🤖 Asistente IA filtra leads</li>
+            <li>🔗 Trazabilidad blockchain</li>
+          </ul>
         </div>
       </div>
+      <blockquote class="caso-quote reveal">
+        <svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M11.192 15.757c0-.88-.23-1.618-.69-2.217-.326-.412-.768-.683-1.327-.812-.55-.128-1.07-.137-1.54-.028-.16-.95.1-1.95.76-3 .66-1.06 1.65-2.02 2.97-2.88l-1.2-1.47C8.22 6.5 6.9 7.66 5.84 9.1c-1.06 1.44-1.59 2.99-1.59 4.64 0 1.58.5 2.85 1.5 3.82 1 .97 2.22 1.45 3.67 1.45 1.34 0 2.42-.4 3.26-1.2.84-.8 1.26-1.82 1.26-3.05zM21.1 15.757c0-.88-.23-1.618-.69-2.217-.326-.412-.768-.683-1.327-.812-.55-.128-1.07-.137-1.54-.028-.16-.95.1-1.95.76-3 .66-1.06 1.65-2.02 2.97-2.88l-1.2-1.47c-1.95 1.16-3.27 2.32-3.96 3.76-.7 1.44-1.04 2.99-1.04 4.64 0 1.58.5 2.85 1.5 3.82 1 .97 2.22 1.45 3.67 1.45 1.34 0 2.42-.4 3.26-1.2.84-.8 1.26-1.82 1.26-3.05z"/></svg>
+        <p>"Migo.ia no nos vendió software; nos reestructuró la empresa. Ahora somos más rápidos, más auditables y vendemos más."</p>
+        <cite>— Cliente Consultora Ambiental, Chile</cite>
+      </blockquote>
     </div>
   </section>
 
   <!-- NOSOTROS -->
   <section class="nosotros" id="nosotros">
     <div class="container">
-      <div class="section-header reveal center">
-        <span class="section-tag">El Equipo</span>
-        <h2 class="section-title">No somos un logo.<br/>Somos la interpretación de tu necesidad.</h2>
+      <div class="section-tag reveal">— El Equipo</div>
+      <h2 class="section-title reveal">
+        No somos un logo.<br />
+        <span class="accent">Somos la interpretación<br />de tu necesidad.</span>
+      </h2>
+      <div class="team-grid">
+        <div class="team-card reveal">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#00ffcc22,#00aaff22);">
+            <span>LA</span>
+          </div>
+          <h3>Luis Aguilera</h3>
+          <span class="team-role">Product Manager · Co-Fundador</span>
+          <p>Décadas de experiencia operativa real en Venezuela y Chile. Traduce necesidades de negocio complejas en arquitecturas de software de precisión quirúrgica.</p>
+        </div>
+        <div class="team-card reveal reveal-delay-1">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#ccff0022,#00ffcc22);">
+            <span>IG</span>
+          </div>
+          <h3>Isabel Galdames</h3>
+          <span class="team-role">CEO · Co-Fundadora</span>
+          <p>Visionaria estratégica con profundo conocimiento del mercado latinoamericano. Lidera la dirección comercial y la relación con cada cliente como si fuera el único.</p>
+        </div>
       </div>
-      <div class="team-layout">
-        <div class="team-members">
-          <div class="team-card reveal">
-            <div class="tc-avatar">LA</div>
-            <div class="tc-info">
-              <h3>Luis Aguilera</h3>
-              <span>Product Manager · Co-Fundador</span>
-              <p>Traduce necesidades de negocio complejas en arquitecturas de software de precisión quirúrgica.</p>
-            </div>
-          </div>
-          <div class="team-card reveal reveal-delay-1">
-            <div class="tc-avatar tc-avatar-alt">IG</div>
-            <div class="tc-info">
-              <h3>Isabel Galdames</h3>
-              <span>CEO · Co-Fundadora</span>
-              <p>Visionaria estratégica con un profundo conocimiento del mercado latinoamericano. Lidera la dirección ejecutiva, asegurando que cada solución tecnológica se traduzca en crecimiento comercial y escalabilidad real para nuestros clientes.</p>
-            </div>
-          </div>
-        </div>
-        <div class="team-manifesto reveal reveal-delay-2">
-          <p>Como socios, poseemos la dinámica única de <strong>interpretar exactamente</strong> lo que tu operación necesita antes de escribir una sola línea de código. No construimos software genérico; construimos el <strong>sistema nervioso de tu próximo nivel de facturación.</strong></p>
-        </div>
+      <div class="sinergia reveal">
+        <p>Como esposos y socios, Luis e Isabel poseen la dinámica única de <strong>interpretar exactamente</strong> lo que tu operación necesita antes de escribir una sola línea de código. No construimos software genérico; construimos el <strong>sistema nervioso de tu próximo nivel de facturación.</strong></p>
       </div>
     </div>
   </section>
 
   <!-- CONTACTO -->
   <section class="contacto" id="contacto">
-    <div class="container">
-      <div class="contacto-wrapper reveal">
-        <div class="contacto-text">
-          <span class="section-tag">Diagnóstico Gratuito</span>
-          <h2 class="section-title">¿Listo para dejar de operar en el pasado?</h2>
-          <p>Analizaremos tu flujo actual y te diremos exactamente dónde la IA y la Digitalización te harán <strong>ganar más dinero</strong>.</p>
-        </div>
-        <div class="contacto-form-container">
-          <form class="form-modern" id="contactForm" novalidate>
-            <div class="input-group">
-              <label for="nombre">Nombre</label>
-              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required />
-            </div>
-            <div class="input-group">
-              <label for="email">Email de Empresa</label>
-              <input type="email" id="email" name="email" placeholder="tu@empresa.com" required />
-            </div>
-            <div class="input-group full">
-              <label>¿Tu dolor principal?</label>
-              <div class="pills-group" id="optionBtns">
-                <button type="button" class="pill-btn" data-value="Papel en Terreno">Papel en Terreno</button>
-                <button type="button" class="pill-btn" data-value="Onboarding Lento">Onboarding Lento</button>
-                <button type="button" class="pill-btn" data-value="Leads Malos">Leads Malos</button>
-              </div>
-              <input type="hidden" name="dolor" id="dolorHidden" />
-            </div>
-            <button type="submit" class="btn-primary full-width">
-              Solicitar Auditoría
-            </button>
-            <p class="privacy-note">Sin spam. Solo una conversación honesta.</p>
-          </form>
-          <div class="form-success" id="formSuccess">
-            <div class="success-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-            <h3>¡Mensaje Enviado!</h3>
-            <p>Nos pondremos en contacto contigo pronto.</p>
+    <div class="contacto-bg">
+      <div class="orb orb-contact-1"></div>
+      <div class="orb orb-contact-2"></div>
+    </div>
+    <div class="container contacto-inner">
+      <div class="section-tag reveal" style="color:#00ffcc88;">— Diagnóstico Gratuito</div>
+      <h2 class="contacto-title reveal">
+        ¿Listo para dejar de<br />operar en el pasado?
+      </h2>
+      <p class="contacto-sub reveal">Agenda tu Sesión de Diagnóstico Operativo. Analizaremos tu flujo actual y te diremos exactamente dónde la IA y la Digitalización te harán <strong>ganar más dinero.</strong></p>
+
+      <form class="contacto-form reveal" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email de Empresa</label>
+            <input type="email" id="email" name="email" placeholder="tu@empresa.com" required />
           </div>
         </div>
+        <div class="form-group full">
+          <label>¿Tu dolor principal?</label>
+          <div class="option-btns" id="optionBtns">
+            <button type="button" class="opt-btn" data-value="Papel en Terreno">📄 Papel en Terreno</button>
+            <button type="button" class="opt-btn" data-value="Onboarding Lento">⏳ Onboarding Lento</button>
+            <button type="button" class="opt-btn" data-value="Leads Malos">❌ Leads Malos</button>
+          </div>
+          <input type="hidden" name="dolor" id="dolorHidden" />
+        </div>
+        <button type="submit" class="btn-primary btn-form">
+          Solicitar Auditoría de Flujo
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+        <p class="form-privacy">Sin spam. Solo una conversación honesta sobre tu operación.</p>
+      </form>
+      <div class="form-success" id="formSuccess">
+        <div class="success-icon">✓</div>
+        <h3>¡Mensaje Enviado!</h3>
+        <p>Nos pondremos en contacto contigo en menos de 24 horas.</p>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container footer-content">
-      <div class="footer-brand">
-        <div class="f-logo">migo<span class="dot">.ia</span></div>
-        <p>Operando para Latinoamérica desde Chile.</p>
-      </div>
-      <div class="footer-links">
+    <div class="container footer-inner">
+      <div class="footer-logo">Migo<span class="dot">.</span>ia</div>
+      <p class="footer-desc">Viña del Mar, Chile. Operando para Latinoamérica.</p>
+      <div class="footer-tags">
         <span>Blockchain</span>
         <span>Inteligencia Artificial</span>
         <span>Software a Medida</span>
       </div>
-      <div class="footer-bottom">
-        <p>© 2025 Migo.ia · Todos los derechos reservados.</p>
-      </div>
+      <p class="footer-copy">© 2025 Migo.ia · Todos los derechos reservados.</p>
     </div>
   </footer>
 
-  <!-- WHATSAPP -->
-  <a class="whatsapp-btn" id="whatsappFab" href="https://wa.me/56944630826?text=Hola%20Migo.ia%2C%20quiero%20una%20asesor%C3%ADa%20gratuita%20para%20mi%20operaci%C3%B3n." target="_blank" rel="noopener noreferrer">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <!-- WHATSAPP FLOTANTE -->
+  <a class="whatsapp-fab" id="whatsappFab"
+     href="https://wa.me/56944630826?text=Hola%20Migo.ia%2C%20quiero%20una%20asesor%C3%ADa%20gratuita%20para%20mi%20operaci%C3%B3n."
+     target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+    <span class="wab-pulse"></span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="wab-label">¿Hablamos?</span>
   </a>
 
   <script src="main.js"></script>
